@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pontos"
+            android:icon="@drawable/ic_directions_bus_white_24dp"
+            android:title="Pontos" />
+        <item
+            android:id="@+id/nav_itinerarios"
+            android:icon="@drawable/ic_near_me_black_24dp"
+            android:title="Itinerários" />
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favoritos" />
+        <item
+            android:id="@+id/nav_informacoes"
+            android:icon="@drawable/ic_assignment_late_black_24dp"
+            android:title="Informações" />
+    </group>
+
+</menu>
