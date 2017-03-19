@@ -12,6 +12,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
+
 public class MapsActivity extends SupportMapFragment implements OnMapReadyCallback{
 
     private static final String TAG = "puts grilla!";
@@ -39,15 +41,19 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
 
             mMap = googleMap;
 
-            mMap.getUiSettings().setZoomControlsEnabled(true);
+        //Controle do zoom
+//            mMap.getUiSettings().setZoomControlsEnabled(true);
+        //Buscar localização atual do usuario
+//            mMap.setMyLocationEnabled(true);
 
-            mMap.setMyLocationEnabled(true);
 
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Posiciona a câmera na localização atual do usuário
+        LatLng atual = new LatLng(locationManager.getLastKnownLocation(provider).getLatitude(), locationManager.getLastKnownLocation(provider).getLongitude());
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(atual, 14));
+        mMap.addMarker(new MarkerOptions().position(atual).title("Você está aqui"));
+        mMap.animateCamera(CameraUpdateFactory.zoomIn());
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
 
     }
+
 }
