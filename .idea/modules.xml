@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/CamposBus.iml" filepath="$PROJECT_DIR$/CamposBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/CamposBus2.iml" filepath="$PROJECT_DIR$/CamposBus2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onibusappCampos.iml" filepath="$PROJECT_DIR$/onibusappCampos.iml" />
     </modules>
   </component>
 </project>
