@@ -4,6 +4,9 @@
     android:layout_height="match_parent">
 
 
+    <!-- ponto selecionado centralizado com mapa como bckgrnd aqui
+         textview com peso um ocupando este espaço provisoriamente -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -11,6 +14,7 @@
         android:background="#000000"/>
 
     <ListView
+        android:id="@+id/list_with_time"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>

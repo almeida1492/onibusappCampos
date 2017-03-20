@@ -1,9 +1,10 @@
 package com.camposbus.soulcode.camposbus;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -42,6 +45,16 @@ public class MainActivity extends AppCompatActivity
         transaction.add(R.id.container, new MapsActivity(), "MapsFragment");
 
         transaction.commitAllowingStateLoss();
+
+        /*isso pra testar a selecao de pontos já que ainda não tem ponto no mapa*/
+        Button selecaoPonto = (Button) findViewById(R.id.bus_stop_on_the_map);
+        selecaoPonto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent selecaoPontoIntent = new Intent(MainActivity.this, StopSelectionActivity.class);
+                startActivity(selecaoPontoIntent);
+            }
+        });
 
     }
 
