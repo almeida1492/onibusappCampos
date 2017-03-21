@@ -18,13 +18,13 @@ public class StopSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.stop_selection);
 
         /*teste com um slot*/
-        ArrayList<Info> linhas_info = new ArrayList<Info>();
-        linhas_info.add(new Info("Ceasa/St.Antonio", "02 min"));
-        linhas_info.add(new Info("Penha/Pecuária", "04 min"));
-        linhas_info.add(new Info("Bugalho", "08 min"));
+        ArrayList<InfoTime> linhas_infoTime = new ArrayList<InfoTime>();
+        linhas_infoTime.add(new InfoTime("Ceasa/St.Antonio", "02 min"));
+        linhas_infoTime.add(new InfoTime("Penha/Pecuária", "04 min"));
+        linhas_infoTime.add(new InfoTime("Bugalho", "08 min"));
 
 
-        InfoAdapter adapter = new InfoAdapter(this, linhas_info);
+        InfoTimeAdapter adapter = new InfoTimeAdapter(this, linhas_infoTime);
         ListView listView = (ListView) findViewById(R.id.list_with_time);
         listView.setAdapter(adapter);
     }

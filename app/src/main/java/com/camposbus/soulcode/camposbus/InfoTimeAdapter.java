@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * Created by henriquedealmeida on 20/03/17.
  */
 
-public class InfoAdapter extends ArrayAdapter<Info> {
-    public InfoAdapter(Activity context, ArrayList<Info> linhas_info){
-        super(context, 0, linhas_info);
+public class InfoTimeAdapter extends ArrayAdapter<InfoTime> {
+    public InfoTimeAdapter(Activity context, ArrayList<InfoTime> linhas_infoTime){
+        super(context, 0, linhas_infoTime);
     }
 
     @Override
@@ -26,15 +26,15 @@ public class InfoAdapter extends ArrayAdapter<Info> {
                     R.layout.stop_selection_item, parent, false);
         }
 
-        Info currentInfo = getItem(position);
+        InfoTime currentInfoTime = getItem(position);
 
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.linha_nome);
 
-        nameTextView.setText(currentInfo.getLinhaNome());
+        nameTextView.setText(currentInfoTime.getLinhaNome());
 
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.tempo_restante);
 
-        numberTextView.setText(currentInfo.getTempoRestante());
+        numberTextView.setText(currentInfoTime.getTempoRestante());
 
         return listItemView;
     }
