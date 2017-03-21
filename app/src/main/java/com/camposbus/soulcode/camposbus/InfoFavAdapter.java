@@ -45,7 +45,7 @@ public class InfoFavAdapter extends ArrayAdapter<InfoFav>{
         ImageView favIndicator = (ImageView) listItemView.findViewById(R.id.linha_fav_indicator);
 
         if(currentInfoFav.getFavStatus()){
-            favIndicator.setImageResource(R.drawable.favicon);
+            favIndicator.setImageResource(R.drawable.favicon); /*missing right resource here*/
         }
         else{
             favIndicator.setImageResource(R.drawable.favicon);
