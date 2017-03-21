@@ -28,9 +28,17 @@ public class InfoTimeAdapter extends ArrayAdapter<InfoTime> {
 
         InfoTime currentInfoTime = getItem(position);
 
+
+
+        /*deals with the name attribute adaption*/
+
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.linha_nome);
 
         nameTextView.setText(currentInfoTime.getLinhaNome());
+
+
+
+        /*deals with the time attribute adaption*/
 
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.tempo_restante);
 
