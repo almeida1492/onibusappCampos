@@ -53,7 +53,6 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions().position(atual).title("Você está aqui"));
         mMap.animateCamera(CameraUpdateFactory.zoomIn());
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
-
     }
 
 }

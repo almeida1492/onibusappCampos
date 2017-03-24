@@ -10,14 +10,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_gravity="center_vertical"
-        android:layout_margin="16dp"
+        android:padding="16dp"
         tools:text="Ceasa/St.Antônio"/>
 
     <ImageView
         android:id="@+id/linha_fav_indicator"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_margin="16dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
         android:layout_alignParentRight="true"
         android:src="@drawable/favicon"/>
 

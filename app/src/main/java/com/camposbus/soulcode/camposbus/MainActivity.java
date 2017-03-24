@@ -51,11 +51,10 @@ public class MainActivity extends AppCompatActivity
         selecaoPonto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent selecaoPontoIntent = new Intent(MainActivity.this, StopSelectionActivity.class);
-                startActivity(selecaoPontoIntent);
+                Intent stopSelectionIntent = new Intent(MainActivity.this, StopSelectionActivity.class);
+                startActivity(stopSelectionIntent);
             }
         });
-
     }
 
     @Override
@@ -99,11 +98,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_pontos) {
             // Handle the camera action
         } else if (id == R.id.nav_itinerarios) {
-
-        } else if (id == R.id.nav_favoritos) {
-
-        } else if (id == R.id.nav_informacoes) {
-
+            Intent itinerariesIntent = new Intent(MainActivity.this, ItinerariesListActivity.class);
+            startActivity(itinerariesIntent);
+        }
+        else if (id == R.id.nav_favoritos) {
+            Intent favIntent = new Intent(MainActivity.this, FavActivity.class);
+            startActivity(favIntent);
+        }
+        else if (id == R.id.nav_informacoes) {
+            /*faltando*/
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
