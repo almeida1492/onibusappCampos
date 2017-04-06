@@ -18,10 +18,10 @@ public class StopSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.stop_selection);
 
         /*teste com um slot*/
-        ArrayList<InfoTime> linhas_infoTime = new ArrayList<InfoTime>();
-        linhas_infoTime.add(new InfoTime("Ceasa/St.Antonio", "02 min"));
-        linhas_infoTime.add(new InfoTime("Penha/Pecuária", "04 min"));
-        linhas_infoTime.add(new InfoTime("Bugalho", "08 min"));
+        ArrayList<BusRoute> linhas_infoTime = new ArrayList<BusRoute>();
+        linhas_infoTime.add(new BusRoute("Ceasa/St.Antonio", "02 min"));
+        linhas_infoTime.add(new BusRoute("Penha/Pecuária", "04 min"));
+        linhas_infoTime.add(new BusRoute("Bugalho", "08 min"));
 
 
         InfoTimeAdapter adapter = new InfoTimeAdapter(this, linhas_infoTime);

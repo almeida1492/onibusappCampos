@@ -14,9 +14,9 @@ import java.util.ArrayList;
  * Created by henriquedealmeida on 21/03/17.
  */
 
-public class InfoFavAdapter extends ArrayAdapter<InfoFav>{
+public class InfoFavAdapter extends ArrayAdapter<BusRoute>{
 
-    public InfoFavAdapter(Activity context, ArrayList<InfoFav> linhas_infoFav){
+    public InfoFavAdapter(Activity context, ArrayList<BusRoute> linhas_infoFav){
         super(context, 0, linhas_infoFav);
     }
 
@@ -28,23 +28,17 @@ public class InfoFavAdapter extends ArrayAdapter<InfoFav>{
                     R.layout.fav_item, parent, false);
         }
 
-        InfoFav currentInfoFav = getItem(position);
-
-
+        BusRoute currentInfo = getItem(position);
 
         /*deals with the name attribute adaption*/
-
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.linha_nome_fav);
 
-        nameTextView.setText(currentInfoFav.getName());
-
-
+        nameTextView.setText(currentInfo.getRouteName());
 
         /*deals with the favorite status attribute adaption*/
-
         ImageView favIndicator = (ImageView) listItemView.findViewById(R.id.linha_fav_indicator);
 
-        if(currentInfoFav.getFavStatus()){
+        if(currentInfo.getFavStatus()){
             favIndicator.setImageResource(R.drawable.favicon); /*missing right resource here*/
         }
         else{

@@ -13,8 +13,8 @@ import java.util.ArrayList;
  * Created by henriquedealmeida on 20/03/17.
  */
 
-public class InfoTimeAdapter extends ArrayAdapter<InfoTime> {
-    public InfoTimeAdapter(Activity context, ArrayList<InfoTime> linhas_infoTime){
+public class InfoTimeAdapter extends ArrayAdapter<BusRoute> {
+    public InfoTimeAdapter(Activity context, ArrayList<BusRoute> linhas_infoTime){
         super(context, 0, linhas_infoTime);
     }
 
@@ -26,23 +26,20 @@ public class InfoTimeAdapter extends ArrayAdapter<InfoTime> {
                     R.layout.stop_selection_item, parent, false);
         }
 
-        InfoTime currentInfoTime = getItem(position);
-
+        BusRoute currentInfoTime = getItem(position);
 
 
         /*deals with the name attribute adaption*/
 
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.linha_nome);
 
-        nameTextView.setText(currentInfoTime.getLinhaNome());
-
-
+        nameTextView.setText(currentInfoTime.getRouteName());
 
         /*deals with the time attribute adaption*/
 
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.tempo_restante);
 
-        numberTextView.setText(currentInfoTime.getTempoRestante());
+        numberTextView.setText(currentInfoTime.getRouteTime());
 
         return listItemView;
     }

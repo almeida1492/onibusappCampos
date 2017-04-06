@@ -17,20 +17,20 @@ public class ItinerariesListActivity extends AppCompatActivity {
         setContentView(R.layout.itineraries_list);
 
         /*enquanto não tem database*/
-        ArrayList<InfoFav> linhas_infoFav = new ArrayList<InfoFav>();
-        linhas_infoFav.add(new InfoFav("Ceasa/St.Antonio"));
-        linhas_infoFav.add(new InfoFav("Penha/Pecuária"));
-        linhas_infoFav.add(new InfoFav("Bugalho"));
-        linhas_infoFav.add(new InfoFav("Goitacazes"));
-        linhas_infoFav.add(new InfoFav("Farol"));
-        linhas_infoFav.add(new InfoFav("Travessão/Centro"));
-        linhas_infoFav.add(new InfoFav("Donana/Centro"));
-        linhas_infoFav.add(new InfoFav("Tocos/Centro"));
-        linhas_infoFav.add(new InfoFav("Penha/Centro"));
-        linhas_infoFav.add(new InfoFav("Nova Brasília"));
-        linhas_infoFav.add(new InfoFav("Eldorado"));
-        linhas_infoFav.add(new InfoFav("Pq.Guarus"));
-        linhas_infoFav.add(new InfoFav("Bonsucesso"));
+        ArrayList<BusRoute> linhas_infoFav = new ArrayList<BusRoute>();
+        linhas_infoFav.add(new BusRoute("Ceasa/St.Antonio"));
+        linhas_infoFav.add(new BusRoute("Penha/Pecuária"));
+        linhas_infoFav.add(new BusRoute("Bugalho"));
+        linhas_infoFav.add(new BusRoute("Goitacazes"));
+        linhas_infoFav.add(new BusRoute("Farol"));
+        linhas_infoFav.add(new BusRoute("Travessão/Centro"));
+        linhas_infoFav.add(new BusRoute("Donana/Centro"));
+        linhas_infoFav.add(new BusRoute("Tocos/Centro"));
+        linhas_infoFav.add(new BusRoute("Penha/Centro"));
+        linhas_infoFav.add(new BusRoute("Nova Brasília"));
+        linhas_infoFav.add(new BusRoute("Eldorado"));
+        linhas_infoFav.add(new BusRoute("Pq.Guarus"));
+        linhas_infoFav.add(new BusRoute("Bonsucesso"));
 
 
         InfoFavAdapter adapter = new InfoFavAdapter(this, linhas_infoFav);

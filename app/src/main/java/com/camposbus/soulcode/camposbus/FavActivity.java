@@ -17,10 +17,10 @@ public class FavActivity extends AppCompatActivity{
         setContentView(R.layout.fav_list);
 
         /*teste com um slot*/
-        ArrayList<InfoFav> linhas_infoFav = new ArrayList<InfoFav>();
-        linhas_infoFav.add(new InfoFav("Ceasa/St.Antonio"));
-        linhas_infoFav.add(new InfoFav("Penha/Pecuária"));
-        linhas_infoFav.add(new InfoFav("Bugalho"));
+        ArrayList<BusRoute> linhas_infoFav = new ArrayList<BusRoute>();
+        linhas_infoFav.add(new BusRoute("Ceasa/St.Antonio"));
+        linhas_infoFav.add(new BusRoute("Penha/Pecuária"));
+        linhas_infoFav.add(new BusRoute("Bugalho"));
 
 
         InfoFavAdapter adapter = new InfoFavAdapter(this, linhas_infoFav);
