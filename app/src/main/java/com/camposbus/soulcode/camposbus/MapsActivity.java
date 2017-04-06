@@ -14,9 +14,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-public class MapsActivity extends SupportMapFragment implements OnMapReadyCallback{
-
-    private static final String TAG = "puts grilla!";
+public class MapsActivity extends SupportMapFragment implements OnMapReadyCallback, GoogleMap.OnMapClickListener{
 
     private GoogleMap mMap;
 
@@ -33,26 +31,23 @@ public class MapsActivity extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-            locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        String provider = locationManager.getBestProvider(criteria, true);
+        mMap = googleMap;
 
-            Criteria criteria = new Criteria();
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setMyLocationEnabled(true);
 
-            String provider = locationManager.getBestProvider(criteria, true);
-
-            mMap = googleMap;
-
-        //Controle do zoom
-//            mMap.getUiSettings().setZoomControlsEnabled(true);
-        //Buscar localização atual do usuario
-//            mMap.setMyLocationEnabled(true);
-
-
-        // Posiciona a câmera na localização atual do usuário
         LatLng atual = new LatLng(locationManager.getLastKnownLocation(provider).getLatitude(), locationManager.getLastKnownLocation(provider).getLongitude());
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(atual, 14));
-        mMap.addMarker(new MarkerOptions().position(atual).title("Você está aqui"));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(atual, 24));
         mMap.animateCamera(CameraUpdateFactory.zoomIn());
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(24), 2000, null);
     }
 
+    @Override
+    public void onMapClick(LatLng latLng) {
+
+    }
 }
